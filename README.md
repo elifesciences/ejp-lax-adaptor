@@ -1,7 +1,8 @@
 # ejp-scraper 2.0
 
 An attempt to automate and expand the good work done here: 
-https://github.com/elifesciences/eLife-Reporting-SQL
+
+    https://github.com/elifesciences/eLife-Reporting-SQL
 
 ## installation
 
