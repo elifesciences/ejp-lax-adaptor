@@ -1,3 +1,7 @@
+__description__ = """downloads the latest EJP exports from the bucket to 
+./thisdir/downloads/<ymd>/queryname.csv"""
+__author__ = "Luke Skibinski <l.skibinski@elifesciences.org>"
+
 import os, sys
 from os.path import join
 from datetime import datetime
@@ -6,8 +10,7 @@ import logging
 logging.basicConfig
 LOG = logging.getLogger(__name__)
 
-"downloads the latest queries from the bucket to ./thisdir/<ymd>/queryname"
-
+THIS_DIR = os.path.realpath(os.path.dirname(sys.argv[0]))
 BUCKET = "elife-ejp-ftp"
 QUERIES = """ejp_query_tool_query_id_134_15c)_Accepted_Paper_Corresponding_Authors_<ymd>_eLife.csv
 ejp_query_tool_query_id_152_15a)_Accepted_Paper_Details_<ymd>_eLife.csv
@@ -45,8 +48,6 @@ ejp_query_tool_query_id_256_SQL_Appeals_Rev3_<ymd>_eLife.csv
 ejp_query_tool_query_id_298_SQL_Institution_1_<ymd>_eLife.csv
 ejp_query_tool_query_id_300_SQL_Institution_3_<ymd>_eLife.csv
 ejp_query_tool_query_id_41_04e)_DEs_assigned_<ymd>_eLife.csv""".splitlines()
-
-THIS_DIR = os.path.realpath(os.path.dirname(sys.argv[0]))
 
 def ymd(dt=None):
     if not dt:
