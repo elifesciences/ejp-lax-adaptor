@@ -1,0 +1,111 @@
+
+query 15a
+- manuscript contributing authors
+
+query 15b
+- corresponding author to manuscript
+
+query 176
+- poa details
+
+query 177
+- poa contributing authors
+
+query 178
+- poa licence?
+
+query 179
+- poa subject areas
+
+
+query 180
+- poa received + 'receipt'
+- !!
+
+query 182
+- research organism
+
+query 190
+- submission volume by month
+- !!
+
+query 191
+- poa titles??
+
+query 192
+- poa abstracts
+
+query 209
+- decisions
+    - initial qc dt
+    - initial decision dt
+    - appeal_id? 
+    - appeal dt
+- !!
+
+query 210
+- more decisions
+    - full qc dt
+    - full decision
+    - full decision dt
+    - appeal id
+    
+query 211
+- rev1 qc dt
+- rev1 decision
+- rev decision dt
+- appeal id
+
+query 212
+- same again?
+    - "ms","rev1_qc_dt","rev1_decision","rev1_decision_dt","appeal"
+- file says rev2
+
+query 213
+- rev3
+
+query 214
+- rev4
+
+query 218
+- type code? 
+    - RA, SR
+
+221
+- senior editor start dates
+
+222
+- reviewing editor start dates
+
+226
+- poa keywords
+
+240
+- like 218
+
+241
+- same again
+
+
+242
+- group authors
+
+245
+- same again
+
+246
+- same again
+
+247
+- senior editor start dates
+    - again
+    
+248
+- senior editor start dates
+    - again
+
+250
+- senior editor countries
+
+
+
