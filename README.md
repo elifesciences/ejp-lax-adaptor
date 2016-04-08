@@ -8,12 +8,22 @@ https://github.com/elifesciences/eLife-Reporting-SQL
 
     ./install.sh
 
-## usage
+## data download usage
 
 I just have downloading happening right now:
 
     source venv/bin/activate.sh
     python latest_queries.py
+
+## report scraping
+
+James' work already generates a database that can be inspected directly as well
+as a report that is used for submission metrics.
+
+It's this report that will be used to generate something easily importable into 
+Lax.
+
+    python src/ejp_scraper.py < /path/to/report.csv
 
 ## Copyright & Licence
 
