@@ -43,7 +43,8 @@ def paper_type(mstype):
         'SR',
         'AV',
         'RR',
-        'TR'
+        'TR',
+        'RS'
     ], "unknown paper type %r" % mstype
     return mstype
 
