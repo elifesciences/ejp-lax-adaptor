@@ -1,4 +1,4 @@
-# ejp-scraper 2.0
+# ejp-scraper
 
 An attempt to automate and expand the good work done here: 
 
