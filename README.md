@@ -1,29 +1,32 @@
 # ejp-scraper
 
-An attempt to automate and expand the good work done here: 
-
-https://github.com/elifesciences/eLife-Reporting-SQL
+Transforms the report generated [here](https://github.com/elifesciences/eLife-Reporting-SQL)
+into a more compatible format for [Lax](https://github.com/elifesciences/lax)
 
 ## installation
 
     ./install.sh
-
-## data download usage
-
-I just have downloading happening right now:
-
-    source venv/bin/activate.sh
-    python latest_queries.py
 
 ## report scraping
 
 James' work already generates a database that can be inspected directly as well
 as a report that is used for submission metrics.
 
-It's this report that will be used to generate something easily importable into 
-Lax.
+It's this report that is used as input to the scraper:
 
-    python src/ejp_scraper.py < /path/to/report.csv
+    ./scrape-ejp-report.sh /path/to/report.csv > output.json
+    
+## report data download
+
+eLife receives dumps of data from views of the EJP database into an S3 bucket.
+
+This data is then processed into a single database using this [here](https://github.com/elifesciences/eLife-Reporting-SQL). 
+
+The files themselves can be downloaded in bulk without having to generate a 
+report with:
+
+    source venv/bin/activate.sh
+    python latest_queries.py
 
 ## Copyright & Licence
 
