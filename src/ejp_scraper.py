@@ -38,14 +38,15 @@ def tfield(val):
 
 @fattrs('this.type as mstype')
 def paper_type(mstype):
-    assert mstype in [
-        'RA',
-        'SR',
-        'AV',
-        'RR',
-        'TR',
-        'RS'
-    ], "unknown paper type %r" % mstype
+    types = { 
+        'RA': 'Research article',
+        'SR': 'Registered report',
+        'AV': 'Short report',
+        'RR': 'Research advance',
+        'TR': 'Replication study',
+        'RS': 'Tools and resources',
+    }
+    assert mstype in types.keys(), "unknown paper type %r" % mstype
     return mstype
 
 @fattrs('this.ms as msid')
