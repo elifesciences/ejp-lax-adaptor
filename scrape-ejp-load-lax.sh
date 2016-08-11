@@ -3,12 +3,17 @@
 
 set -e # everything must succeed
 
+if [ ! -d /opt/elife-reporting/ ]; then
+    # elife-reporting not installed, quit early
+    exit 0
+fi;
+
 . ./install.sh
 
 # scrape the report into json
 cd /opt/ejp-lax-adaptor/
 report="/opt/elife-reporting/paper_history$(date "+%Y_%m_%d").csv"
-./.scrape-ejp.sh $report > /tmp/ejp-report.json
+python ./src/ejp_scraper.py $report > /tmp/ejp-report.json
 
 # import into lax
 cd /srv/lax/
