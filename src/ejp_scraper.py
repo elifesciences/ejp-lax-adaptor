@@ -45,6 +45,7 @@ def paper_type(mstype):
         'RR': 'Research advance',
         'TR': 'Replication study',
         'RS': 'Tools and resources',
+        'RE': 'Research exchange',
     }
     assert mstype in types.keys(), "unknown paper type %r" % mstype
     return mstype
