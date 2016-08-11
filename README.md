@@ -3,6 +3,8 @@
 Transforms the report generated [here](https://github.com/elifesciences/eLife-Reporting-SQL)
 into a more compatible format for [Lax](https://github.com/elifesciences/lax)
 
+This application is managed as part of the [Lax adaptors](https://github.com/elifesciences/lax-formula).
+
 ## installation
 
     ./install.sh
@@ -14,8 +16,9 @@ as a report that is used for submission metrics.
 
 It's this report that is used as input to the scraper:
 
-    ./scrape-ejp-report.sh /path/to/report.csv > output.json
-    
+    source venv/bin/activate.sh
+    python ./src/ejp_scraper.py /path/to/report.csv
+
 ## report data download
 
 eLife receives dumps of data from views of the EJP database into an S3 bucket.
