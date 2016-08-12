@@ -8,8 +8,9 @@ if [ ! -d /opt/elife-reporting/ ]; then
     exit 0
 fi;
 
-if [ ! -e /tmp/ejp-report.json ]; then
-    echo "/tmp/ejp-report.json not found. cannot scrape"
+report="/opt/elife-reporting/paper_history$(date "+%Y_%m_%d").csv"
+if [ ! -e "$report" ]; then
+    echo "$report not found. cannot scrape it."
     exit 1
 fi
 
@@ -18,7 +19,6 @@ cd /opt/ejp-lax-adaptor/
 . ./install.sh
 
 # scrape the report into json
-report="/opt/elife-reporting/paper_history$(date "+%Y_%m_%d").csv"
 python ./src/ejp_scraper.py $report > /tmp/ejp-report.json
 
 # import into lax
