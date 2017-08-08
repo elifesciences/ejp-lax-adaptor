@@ -8,7 +8,7 @@ if [ ! -d /opt/elife-reporting/ ]; then
     exit 0
 fi;
 
-report="/opt/elife-reporting/paper_history$(date "+%Y_%m_%d").csv"
+report="/opt/elife-reporting/paper_history$(date "+%Y-%m-%d").csv"
 if [ ! -e "$report" ]; then
     echo "$report not found. cannot scrape it."
     exit 1
