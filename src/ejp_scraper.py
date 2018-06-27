@@ -38,14 +38,18 @@ def tfield(val):
 
 @fattrs('this.type as mstype')
 def paper_type(mstype):
+    # these labels aren't actually used
+    # the value is passed through so long as it exists in map
     types = { 
         'RA': 'Research article',
-        'SR': 'Registered report',
         'AV': 'Short report',
         'RR': 'Research advance',
-        'TR': 'Replication study',
-        'RS': 'Tools and resources',
+        'SR': 'Registered report',
+        'TR': 'Tools and resources',
         'RE': 'Research exchange',
+        'SC': 'Scientific Correspondence',
+        'RS': 'Replication study',
+        'RC': 'Research communication',
     }
     assert mstype in types.keys(), "unknown paper type %r" % mstype
     return mstype
