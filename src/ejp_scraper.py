@@ -46,7 +46,7 @@ def paper_type(mstype):
         'RR': 'Research advance',
         'SR': 'Registered report',
         'TR': 'Tools and resources',
-        'RE': 'Research exchange',
+        'RE': 'Research exchange', # deprecated in favour of SC
         'SC': 'Scientific Correspondence',
         'RS': 'Replication study',
         'RC': 'Research communication',
