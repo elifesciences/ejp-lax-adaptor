@@ -1,2 +1,1 @@
-boto3==1.2.6
-hg+ssh://hg@bitbucket.org/lskibinski/scraper#egg=scraper
+et3
