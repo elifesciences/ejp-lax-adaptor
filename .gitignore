@@ -1,10 +1,5 @@
 *.pyc
 *~
-*.sqlite*
 *.orig
-*.log
-downloads/**
 venv
-build
-dist
-*.egg-info
+venv3

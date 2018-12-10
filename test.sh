@@ -1,4 +1,4 @@
 #!/bin/bash
 ./install.sh
-source venv/bin/activate
+source venv3/bin/activate
 PYTHONPATH=src pytest -vv
